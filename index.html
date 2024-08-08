@@ -101,6 +101,7 @@
     <div class="buttons">
         <button onclick="addPoint('عبدالله')">عبدالله</button>
         <button onclick="addPoint('البندري')">البندري</button>
+        <button onclick="resetScore()">مسح النتائج</button>
     </div>
     <div class="question" id="question">من هو الأسرع؟</div>
 
@@ -126,14 +127,27 @@
         <div style="animation-delay: 1.8s;">ما هو الحلم المشترك بينك وبين زوجتك/زوجك؟</div>
         <div style="animation-delay: 1.9s;">ما هو المكان الذي تعرفتم فيه على بعضكم لأول مرة؟</div>
         <div style="animation-delay: 2.0s;">ما هو النشاط المفضل لكم كزوجين؟</div>
+        <div style="animation-delay: 2.1s;">ما هي أغرب مغامرة قمتما بها سويًا؟</div>
+        <div style="animation-delay: 2.2s;">ما هو الشيء الذي يضحكك دائمًا مع زوجتك/زوجك؟</div>
+        <div style="animation-delay: 2.3s;">ما هي الوجبة التي تحب تناولها في الصباح مع زوجتك/زوجك؟</div>
+        <div style="animation-delay: 2.4s;">ما هو الحلم الذي تريد تحقيقه مع زوجتك/زوجك؟</div>
+        <div style="animation-delay: 2.5s;">ما هو أفضل مكان سافرتما إليه معًا؟</div>
+        <div style="animation-delay: 2.6s;">ما هو اللون الذي تعتقد أنه يعبر عن علاقتكما؟</div>
+        <div style="animation-delay: 2.7s;">ما هو أكثر موقف مضحك مررتما به معًا؟</div>
+        <div style="animation-delay: 2.8s;">ما هو الشيء الذي تريد تغييره في علاقتكما؟</div>
+        <div style="animation-delay: 2.9s;">ما هو الشيء الذي تقدره في زوجتك/زوجك ولم تخبرها/ه به من قبل؟</div>
     </div>
-
     <script>
         let score = { 'عبدالله': 0, 'البندري': 0 };
 
         function addPoint(player) {
             score[player]++;
             document.getElementById('result').innerText = `النتيجة: عبدالله ${score['عبدالله']} - البندري ${score['البندري']}`;
+        }
+
+        function resetScore() {
+            score = { 'عبدالله': 0, 'البندري': 0 };
+            document.getElementById('result').innerText = `النتيجة: عبدالله 0 - البندري 0`;
         }
     </script>
 </body>
