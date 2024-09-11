@@ -97,10 +97,10 @@
 </head>
 <body>
     <h1>لعبة مين أسرع؟</h1>
-    <div class="result" id="result">النتيجة: عبدالله 0 - البندري 0</div>
+    <div class="result" id="result">النتيجة: شخص1 0 - شخص2 0</div>
     <div class="buttons">
-        <button onclick="addPoint('شخص2')">عبدالله</button>
-        <button onclick="addPoint('شخص1')">البندري</button>
+        <button onclick="addPoint('شخص2')">شخص2</button>
+        <button onclick="addPoint('شخص1')">شخص2</button>
         <button onclick="resetScore()">مسح النتائج</button>
     </div>
     <div class="question" id="question">من هو الأسرع؟</div>
@@ -138,16 +138,16 @@
         <div style="animation-delay: 2.9s;">ما هو الشيء الذي تقدره في زوجتك/زوجك ولم تخبرها/ه به من قبل؟</div>
     </div>
     <script>
-        let score = { 'عبدالله': 0, 'البندري': 0 };
+        let score = { 'شخص1': 0, 'شخص2': 0 };
 
         function addPoint(player) {
             score[player]++;
-            document.getElementById('result').innerText = `النتيجة: عبدالله ${score['عبدالله']} - البندري ${score['البندري']}`;
+            document.getElementById('result').innerText = `النتيجة: عبدالله ${score['عبدالله']} - شخص1 ${score['شخص1']}`;
         }
 
         function resetScore() {
-            score = { 'عبدالله': 0, 'البندري': 0 };
-            document.getElementById('result').innerText = `النتيجة: عبدالله 0 - البندري 0`;
+            score = { 'عبدالله': 0, 'شخص1': 0 };
+            document.getElementById('result').innerText = `النتيجة: عبدالله 0 - شخص1 0`;
         }
     </script>
 </body>
